@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31ЕГТR0НNКА - Hoglet Dodge (v0.0.3-EnginePerfect)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Вертикальный корпус приставки -->
+    <div class="game-console-vertical">
+        <!-- Левые кнопки: Выбор Скорости (А/Б) -->
+        <div class="mode-buttons-vertical left-side">
+            <button id="btnDifficultyA" class="mode-btn" onclick="switchDifficulty('A')">ИГРА А</button>
+            <button id="btnDifficultyB" class="mode-btn" onclick="switchDifficulty('B')">ИГРА Б</button>
+        </div>
+
+        <!-- Правые кнопки: Выбор Режима Препятствий (1/2) -->
+        <div class="mode-buttons-vertical right-side">
+            <button id="btnMode1" class="mode-btn" onclick="switchMode(1)">РЕЖИМ 1</button>
+            <button id="btnMode2" class="mode-btn" onclick="switchMode(2)">РЕЖИМ 2</button>
+        </div>
+
+        <h1 class="console-title">31ЕГТR0НNКА</h1>
+        <h2 class="console-subtitle">Hoglet Dodge</h2>
+
+        <!-- Верхний ЖК-экран -->
+        <div class="lcd-screen-vertical">
+            <div id="gameModeDisplay">ИГРА А - Р1</div>
+            <div id="score">0000</div>
+            <canvas id="gameCanvas" width="300" height="400"></canvas>
+            <div class="game-version">v0.0.3-EP</div>
+        </div>
+
+        <!-- Две горизонтальные кнопки под экраном -->
+        <div class="controls-horizontal">
+            <button class="action-btn btn-left" onclick="moveHedgehog('left')">?</button>
+            <button class="action-btn btn-right" onclick="moveHedgehog('right')">?</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
